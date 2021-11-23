@@ -239,6 +239,14 @@
 
   
   
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
 </div>
 
             
@@ -350,7 +358,7 @@
 </li>
 <li><p>添加SSH keys，步骤如图3-6所示：<br><img src="/images/first_blog_1/06.png" srcset="/img/loading.gif" lazyload alt="图3-6 添加SSH keys步骤"></p>
 </li>
-<li><p>测试SSH是否绑定成功<br>输入以下命令：注意：<a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a>不要做任何更改！</p>
+<li><p>测试SSH是否绑定成功<br>输入以下命令：注意：<a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>不要做任何更改！</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>ssh -T git<span class="hljs-variable">@github</span>.com<br></code></pre></td></tr></table></figure>
 <p>回车，再次输入yes后回车，就会显示：</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">Hi AmberYu2218! You<span class="hljs-symbol">&#x27;ve</span> successfully authenticated, but GitHub does <span class="hljs-keyword">not</span> provide shell <span class="hljs-keyword">access</span>.<br></code></pre></td></tr></table></figure></li>
@@ -422,6 +430,33 @@ hexo g用来生成Hexo页面，hexo d是使用hexo-deployer-git将页面部署�
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"enable":true,"clientID":"4084c4a44e1767c6765e","clientSecret":"6bfca244312291d4dba13f28bda6900b54d6cdb5","repo":"AmberYu2218.github.io","owner":"AmberYu2218","admin":"AmberYu2218","language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '0f06763dbb6e83f0ec99c5096127db5d'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
             
           </article>
         </div>
